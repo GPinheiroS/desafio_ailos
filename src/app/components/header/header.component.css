@@ -1,0 +1,53 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 6em;
+    padding: 1em;  
+    background: white;
+}
+.header h2{
+    font-weight: bold;
+}
+.header p{
+    color: rgb(134, 134, 134);
+}
+
+.headerNavBar{
+    display: flex;
+    flex-direction: column;
+    row-gap: .4em;
+}
+.userMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+}
+.userMenu .mat-icon{
+    font-size: 1.6rem;
+}
+.userName{
+    font-size: 1em;
+    font-weight: bold;
+    padding: .5em 1em;
+    border: 1px solid var(--alios-primary);
+    border-radius: 1em;
+    color:  var(--alios-primary);
+}
+.userPhoto{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   height: 3em;
+   width: 3em;
+   border-radius: 100%;
+   border: 2px solid var(--alios-primary);
+}
+.userPhoto img{
+    height: 3em;
+}

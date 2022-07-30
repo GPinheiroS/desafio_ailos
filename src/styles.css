@@ -1,0 +1,49 @@
+:root {
+    --alios-primary: #005c7f;
+    --alios-primary-darker: hsl(197, 100%, 20%);
+    --alios-primary-brighter: hsl(197, 80%, 95%);
+    --alios-white: #ffffff;
+    --alios-grey: #c5c5c5;
+    --alios-grey-darker: #aaaaaa;
+    --alios-grey-brighter: #f3f3f3;
+    --alios-great: #0eac00;
+    --alios-negative: #b90000;
+  }
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1em 1em;
+  color: var(--alios-primary);
+  font-size: 1.2em;
+
+  background-color: var(--alios-white);
+  border: 2px solid var(--alios-primary);
+}
+.btn:hover{
+  background-color: var(--alios-grey-brighter);
+}
+.btnInverted{
+  background-color: var(--alios-primary);
+  color: var(--alios-white);;
+}
+.btnInverted:hover{
+  background-color: var(--alios-primary-darker);
+}

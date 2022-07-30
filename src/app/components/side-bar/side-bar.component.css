@@ -1,0 +1,38 @@
+.sideBar{
+    position: relative;
+    z-index: 10;
+  
+    height: 100%;
+    width: 5em;
+    background: var(--alios-primary);
+  
+    transition: 0.5s;
+}
+.sideBar img{
+    width: 5em;
+    margin: .5em 0em;
+}
+.sideBarContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+}
+.sideBarContent li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    width: 100%;
+    height: 3em;
+    color: var(--alios-grey);
+}
+
+.sideBarContent li:hover{
+    cursor: pointer;
+    color: var(--alios-white);
+    background-color: var(--alios-primary-darker);
+}
+.active{
+    color: var(--alios-white);
+}

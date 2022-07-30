@@ -1,0 +1,37 @@
+<div class="content">
+    <app-progress-stepper style="width:100%;"></app-progress-stepper>
+    <div class="pageInfo">
+        <h2>Informe o CPF do futuro cooperado (a)</h2>
+        <div>
+            <p>
+            Se necessário, você poderá duplicar uma conta existente ou pausar e
+            retornar este cadastro futuramente.
+            </p>
+            <p>Digite apenas os números (sem pontos ou traços).</p>
+        </div>
+        <form class="cpfForm">
+            <div class="formWrapper">
+              <label>
+                <h3>CPF</h3>
+                <input
+                [(ngModel)]="cpfInputValue"
+                  class="formInput"
+                  required
+                  name="inputCpf"
+                  type="text"
+                  placeholder="000.000.000-00"
+                  mask="000.000.000-00"
+                />
+              </label>
+              <button
+              type="button"
+              class="btn btnInverted formBtn"
+              (click)="inputHandler()"
+              >
+                Consultar por CPF
+              </button>
+            </div>
+          </form>
+          <app-cards></app-cards>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em 1em;
+    min-height: 80vh;
+    min-width: 100%;
+    background-color: var(--alios-primary-brighter);
+}
+.pageInfo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3em 1em 1em 1em;
+    row-gap: .6em;
+}
+.pageInfo h2{
+    font-size: 1.4rem;
+}
+.pageInfo p{
+    font-size: .9rem;
+}
+.cpfForm{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0em;
+    max-width: 40em;
+}
+.cpfForm label{
+    font-size: .9rem;
+    width: 100%;
+}
+.formWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    column-gap: 1em;
+    width: 80%;
+    height: 4em;
+}
+.formInput{
+    display: flex;
+    width: 100%;
+    height: 2.5em;
+    padding: 0em .5em;
+    font-size: .9rem;
+}
+.formBtn{
+    font-size: 1rem;
+    max-height: 1em;
+    width: 60%;
+}

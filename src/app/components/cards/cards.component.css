@@ -1,0 +1,56 @@
+.cardRow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    width: 100%;
+    min-width: 20em;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 1.5em;
+    width: 20em;
+    height: 13em;
+    background-color:  var(--alios-white);
+    border: 2px solid var(--alios-grey);
+}
+.card h3{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.card p{
+    font-size: .9rem;
+    color: var(--alios-grey-darker);
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 1em 0em;
+    column-gap: 1em;
+}
+
+.cardInfo h3{
+    font-weight: 500;
+}
+.cardInfo .mat-icon{
+    font-size: 1.6rem;
+    color: var(--alios-grey-darker);
+}
+.cardInfo a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--alios-primary);
+  
+    text-decoration: none;
+}
+.cardInfoRow{
+    display: flex;
+    flex-direction: column;
+
+}
