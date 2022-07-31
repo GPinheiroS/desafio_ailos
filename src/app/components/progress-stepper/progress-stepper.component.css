@@ -1,55 +1,49 @@
-.wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-.stepper {
-  width: 100%;
-  z-index: 1;
-}
 .stepperBar{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.stepperBar li {
-  list-style: none;   
-  width: 15%;
-  position: relative;
-  text-align: center;
-  color: var(--alios-grey);
-}
-.stepperBar li:before {
-  content: '';
   display: flex;
-  width: 1.2em;
-  height: 1.2em;
-  border: 2px solid var(--alios-grey);
-  margin: 0 auto 1em auto;
-  border-radius: 50%;
-  background: var(--alios-grey);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.stepperBarItem {
+  display: flex;
+  flex: 1 1;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 6em;
+  gap: .5em;
+}
+.stepperBarItem p {
   color: var(--alios-grey);
-}
-.stepperBar li:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background: var(--alios-grey);
-  top: 10px;
-  left: -50%;
-  z-index: -1;
-}
-.stepperBar li:first-child:after {
-  content: none;
-}
-.stepperBar .active::before {
-  border: 2px solid var(--alios-primary);
-  background: var(--alios-primary-brighter);
-  color: #165c7d !important;
-}
-.stepperBar .active {
-  color: var(--alios-primary);
+  text-align: center;
+  height: 3em;
 }
 
+.stepperBall {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: var(--alios-grey);
+  border-radius: 2em;
+  z-index: 10;
+}
+.stepperLine {
+  position: absolute;
+  left: 50%;
+  top: .5em;
+  width: 100%;
+  height: .4em;
+  background-color: var(--alios-grey);
+  z-index: 1;
+}
+
+.stepperBarItem.active .stepperBall {
+  background-color: var(--alios-primary-brighter);
+  border: 2px solid var(--alios-primary);
+}
+.stepperBarItem.active p {
+  color: var(--alios-primary);
+}

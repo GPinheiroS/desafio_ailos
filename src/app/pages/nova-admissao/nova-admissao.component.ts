@@ -21,21 +21,28 @@ export class NovaAdmissaoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  convertToCpf(){    
-    this.cpfInputValue = mask['cpf'](this.cpfInputValue)
+  cpfMasked(){    
+    return mask['cpf'](this.cpfInputValue)
   }
 
-  inputHandler(){
+  validateCpf(){
     this.cpfValidate = cpfInputValidator(this.cpfInputValue)
     this.erroMsg = this.cpfValidate.errorMsg
+  }
+
+  cooperadorValidator(){
     if (this.cpfValidate.isValid) {
-      this.convertToCpf()
-      this.cooperador = cpfFind( data ,this.cpfInputValue)
+      this.cooperador = cpfFind( data ,this.cpfMasked())
       this.cooperadorValid = this.cooperador.exist
       this.erroMsg = this.cooperador.errorMsg
     } else {
       this.cooperadorValid = false
     }
+  }
+
+  inputHandler(){
+    this.validateCpf()
+    this.cooperadorValidator()
   }
 
 }

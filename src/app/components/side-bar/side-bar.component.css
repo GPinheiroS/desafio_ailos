@@ -1,15 +1,19 @@
 .sideBar{
     position: fixed;
     z-index: 10;
-  
     height: 100%;
     width: 5em;
     background: var(--alios-primary);
   
     transition: 0.5s;
 }
+.logo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .sideBar img{
-    width: 5em;
+    width: 4em;
     margin: .5em 0em;
 }
 .sideBarContent{
@@ -26,6 +30,7 @@
     width: 100%;
     height: 3em;
     color: var(--alios-grey);
+    transition: .5s;
 }
 
 .sideBarContent li:hover{

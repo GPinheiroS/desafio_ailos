@@ -6,6 +6,7 @@
     width: 100%;
     min-width: 20em;
     padding-top: 1em;
+    animation: .8s slide ease-out;
 }
 .card{
     display: flex;
@@ -17,6 +18,7 @@
     height: 13em;
     background-color:  var(--alios-white);
     border: 2px solid var(--alios-grey);
+
 }
 .card h3{
     font-size: 1.1rem;
@@ -62,3 +64,14 @@
 .cardInfo .negative{
     color: var(--alios-negative);
 }
+
+@keyframes slide {
+    0% {
+      opacity: 0;
+      margin-left: 100%;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }

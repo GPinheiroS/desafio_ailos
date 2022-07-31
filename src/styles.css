@@ -5,7 +5,7 @@
     --alios-white: #ffffff;
     --alios-grey: #c5c5c5;
     --alios-grey-darker: #aaaaaa;
-    --alios-grey-brighter: #f3f3f3;
+    --alios-grey-brighter: #dddddd;
     --alios-great: #0eac00;
     --alios-negative: #b90000;
   }
@@ -36,6 +36,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   background-color: var(--alios-white);
   border: 2px solid var(--alios-primary);
+
+  transition: .5s;
 }
 .btn:hover{
   background-color: var(--alios-grey-brighter);

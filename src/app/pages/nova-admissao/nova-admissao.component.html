@@ -21,6 +21,7 @@
                   type="text"
                   placeholder="000.000.000-00"
                   mask="000.000.000-00"
+                  (keydown.enter)="inputHandler()"
                 />
               </label>
               <button
@@ -36,3 +37,4 @@
           <app-cards *ngIf="cooperadorValid" [info]="cooperador?.data" ></app-cards>
     </div>
 </div>
+<app-footer [validCooperador]="cooperadorValid"></app-footer>
