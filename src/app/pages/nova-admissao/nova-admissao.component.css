@@ -22,9 +22,17 @@
 }
 .cpfForm{
     display: flex;
+    position: relative;
     flex-direction: column;
     padding: 1em 0em;
     max-width: 40em;
+}
+.cpfForm p{
+    position: absolute;
+    bottom: -5%;
+}
+.error{
+    color: var(--alios-negative);
 }
 .cpfForm label{
     font-size: .9rem;

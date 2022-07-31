@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { mask } from '../../../utils/cpfMask';
+import {cpfInputValidator} from '../../../utils/cpfInputValidator';
+import {cpfFind} from '../../../utils/cpfFind';
+import {cpfValidate,  responseData} from './models'
 import data from "../../../data/pessoas.json"
 
 @Component({
@@ -8,6 +11,9 @@ import data from "../../../data/pessoas.json"
   styleUrls: ['./nova-admissao.component.css']
 })
 export class NovaAdmissaoComponent implements OnInit {
+  erroMsg: string = ''
+  cooperador?: responseData
+  cpfValidate!: cpfValidate;
   @Input() cpfInputValue: string = '';
   constructor() { }
 
@@ -19,9 +25,13 @@ export class NovaAdmissaoComponent implements OnInit {
   }
 
   inputHandler(){
-    this.convertToCpf()
-    console.log(this.cpfInputValue)
-    console.log(data)
+    this.cpfValidate = cpfInputValidator(this.cpfInputValue)
+    this.erroMsg = this.cpfValidate.errorMsg
+    if (this.cpfValidate.isValid) {
+      this.convertToCpf()
+      this.cooperador = cpfFind( data ,this.cpfInputValue)
+      this.erroMsg = this.cooperador.errorMsg
+    }
   }
 
 }
