@@ -9,7 +9,7 @@
 
 ## Preparando o projeto
 
-Clone o repositorio do projeto `https://github.com/GPinheiroS/desafio_ailos.git`, em seguida execute o comando `npm i` nas pasta raiz do projeto para instalar todas as dependencias necessarias para executar o projeto.
+Clone o repositorio do projeto executando `git clone https://github.com/GPinheiroS/desafio_ailos.git`, em seguida execute o comando `npm i` nas pasta raiz do projeto para instalar todas as dependencias necessarias para executar o projeto.
 
 ## Executando o projeto
 
