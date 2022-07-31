@@ -3,7 +3,7 @@ export const cpfInputValidator = (cpf:string) =>{
       var Soma;
       var Resto;
       Soma = 0;
-      if (cpf == "00000000000") return {isValid:false, errorMsg: 'Insira um Cpf Valido'};
+      if (cpf == "00000000000") return {isValid:false, errorMsg: 'Insira um CPF Valido'};
 
       for (let i = 1; i <= 9; i++) {
         Soma = Soma + parseInt(cpf.substring(i - 1, i)) * (11 - i);
@@ -11,7 +11,7 @@ export const cpfInputValidator = (cpf:string) =>{
       }
 
       if (Resto == 10 || Resto == 11) Resto = 0;
-      if (Resto != parseInt(cpf.substring(9, 10))) return {isValid:false, errorMsg: 'Insira um Cpf Valido'};
+      if (Resto != parseInt(cpf.substring(9, 10))) return {isValid:false, errorMsg: 'Insira um CPF Valido'};
 
       Soma = 0;
       for (let i = 1; i <= 10; i++) {
@@ -20,6 +20,6 @@ export const cpfInputValidator = (cpf:string) =>{
       }
 
       if (Resto == 10 || Resto == 11) Resto = 0;
-      if (Resto != parseInt(cpf.substring(10, 11))) return {isValid:false, errorMsg: 'Insira um Cpf Valido'};
+      if (Resto != parseInt(cpf.substring(10, 11))) return {isValid:false, errorMsg: 'Insira um CPF Valido'};
       return {isValid:true, errorMsg: ''};
 }

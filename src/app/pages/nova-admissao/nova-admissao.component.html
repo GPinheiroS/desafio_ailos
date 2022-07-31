@@ -33,6 +33,6 @@
             </div>
             <p class="error">{{erroMsg}}</p>
           </form>
-          <app-cards></app-cards>
+          <app-cards *ngIf="cooperadorValid" [info]="cooperador?.data" ></app-cards>
     </div>
 </div>

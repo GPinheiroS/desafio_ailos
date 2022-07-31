@@ -13,6 +13,7 @@ import data from "../../../data/pessoas.json"
 export class NovaAdmissaoComponent implements OnInit {
   erroMsg: string = ''
   cooperador?: responseData
+  cooperadorValid?: boolean
   cpfValidate!: cpfValidate;
   @Input() cpfInputValue: string = '';
   constructor() { }
@@ -30,7 +31,10 @@ export class NovaAdmissaoComponent implements OnInit {
     if (this.cpfValidate.isValid) {
       this.convertToCpf()
       this.cooperador = cpfFind( data ,this.cpfInputValue)
+      this.cooperadorValid = this.cooperador.exist
       this.erroMsg = this.cooperador.errorMsg
+    } else {
+      this.cooperadorValid = false
     }
   }
 

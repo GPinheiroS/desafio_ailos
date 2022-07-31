@@ -25,8 +25,8 @@
 		"tipo_sanguineo": "AB-",
 		"cor": "verde",
 		"situacao":"Regular",
-		"conta-corrente": "12345-1",
-		"conta-aplicacao": "54321-1"
+		"conta_corrente": "12345-1",
+		"conta_aplicacao": "54321-1"
 	},
 	{
 		"nome": "Kaique Sérgio Nelson Bernardes",
@@ -53,8 +53,8 @@
 		"tipo_sanguineo": "AB+",
 		"cor": "azul",
 		"situacao":"Suspenso",
-		"conta-corrente": "12345-2",
-		"conta-aplicacao": "54321-2"
+		"conta_corrente": "12345-2",
+		"conta_aplicacao": "54321-2"
 	},
 	{
 		"nome": "Igor Benedito Farias",
@@ -81,8 +81,8 @@
 		"tipo_sanguineo": "O+",
 		"cor": "laranja",
 		"situacao":"Regular",
-		"conta-corrente": "12345-3",
-		"conta-aplicacao": "54321-3"
+		"conta_corrente": "12345-3",
+		"conta_aplicacao": "54321-3"
 	},
 	{
 		"nome": "Valentina Maria Farias",
@@ -109,8 +109,8 @@
 		"tipo_sanguineo": "O-",
 		"cor": "amarelo",
 		"situacao":"Suspenso",
-		"conta-corrente": "12345-4",
-		"conta-aplicacao": "54321-4"
+		"conta_corrente": "12345-4",
+		"conta_aplicacao": "54321-4"
 	},
 	{
 		"nome": "Francisca Elza Vieira",
@@ -137,8 +137,8 @@
 		"tipo_sanguineo": "B+",
 		"cor": "laranja",
 		"situacao":"Regular",
-		"conta-corrente": "12345-5",
-		"conta-aplicacao": "54321-5"
+		"conta_corrente": "12345-5",
+		"conta_aplicacao": "54321-5"
 	},
 	{
 		"nome": "Evelyn Joana Souza",
@@ -165,8 +165,8 @@
 		"tipo_sanguineo": "A-",
 		"cor": "laranja",
 		"situacao":"Regular",
-		"conta-corrente": "12345-6",
-		"conta-aplicacao": "54321-6"
+		"conta_corrente": "12345-6",
+		"conta_aplicacao": "54321-6"
 	}
 
 ]

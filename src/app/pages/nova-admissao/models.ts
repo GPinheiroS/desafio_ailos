@@ -13,5 +13,7 @@ export interface cooperador {
 
 export interface responseData {
   data: cooperador,
+  exist: boolean,
   errorMsg: string 
+
   }
