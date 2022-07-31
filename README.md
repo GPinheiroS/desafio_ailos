@@ -2,9 +2,6 @@
 
  Esse projeto é um desafio da empresa Ailos, que visa a criação de duas telas, uma de Formulario de validação de CPF e outra para carregar os dados de um cooperado.
 
-## Importante
-
-
 
 ## Projeto desenvolvido ultilizando
 
