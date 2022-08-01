@@ -7,7 +7,7 @@
     width: 100%;
     min-height: 6em;
     padding: 1em;  
-    background: white;
+    background: var(--alios-white);
     gap: 1em;
 }
 .header h2{
@@ -23,13 +23,16 @@
 .headerNavBar{
     display: flex;
     flex-direction: column;
+    width: 100%;
     row-gap: .4em;
 }
 .userMenu{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     column-gap: 1em;
+    width: 100%;
 }
 .userMenu .mat-icon{
     font-size: 1.6rem;

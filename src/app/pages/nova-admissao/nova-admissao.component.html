@@ -37,4 +37,11 @@
           <app-cards *ngIf="cooperadorValid" [info]="cooperador?.data" ></app-cards>
     </div>
 </div>
-<app-footer [validCooperador]="cooperadorValid"></app-footer>
+<app-footer>
+  <button *ngIf="cooperadorValid" type="button" class="btn btnInverted animated" primary>
+    Iniciar nova admissão
+  </button>
+  <button type="button" class="btn" secondary>
+    Dicas para abertura da conta
+  </button>
+</app-footer>

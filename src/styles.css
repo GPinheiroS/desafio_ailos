@@ -30,13 +30,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 1em 1em;
+  padding: 1em;
   color: var(--alios-primary);
   font-size: 1.2em;
 
   background-color: var(--alios-white);
   border: 2px solid var(--alios-primary);
-
+  border-radius: 2px;
   transition: .5s;
 }
 .btn:hover{

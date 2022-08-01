@@ -1,14 +1,14 @@
-.content{
+.content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 2em 1em;
-    min-height: 80vh;
+    min-height: 90vh;
     min-width: 100%;
     background-color: var(--alios-primary-brighter);
-    
 }
-.pageInfo{
+
+.pageInfo {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -16,48 +16,63 @@
     row-gap: .6em;
     overflow: hidden;
 }
-.pageInfo h2{
+
+.pageInfo h2 {
     font-size: 1.4rem;
 }
-.pageInfo p{
+
+.pageInfo p {
     font-size: .9rem;
 }
-.cpfForm{
+
+.cpfForm {
     display: flex;
     position: relative;
     flex-direction: column;
     padding: 1em 0em;
     max-width: 40em;
 }
-.cpfForm p{
+
+.cpfForm p {
     position: absolute;
     bottom: -5%;
 }
-.error{
+
+.error {
     color: var(--alios-negative);
 }
-.cpfForm label{
+
+.cpfForm label {
     font-size: .9rem;
     width: 100%;
 }
-.formWrapper{
+
+.formWrapper {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     gap: 1em;
-    width: 80%;
+    width: 100%;
     height: 4em;
 }
-.formInput{
+
+.formInput {
     display: flex;
     width: 100%;
     height: 2.5em;
     padding: 0em .5em;
     font-size: .9rem;
 }
-.formBtn{
+
+.formBtn {
     font-size: 1rem;
     max-height: 1em;
     width: 60%;
 }
 
+@media (width < 648px) {
+    .pageInfo {
+        margin-bottom: 8em;
+    }
+
+}

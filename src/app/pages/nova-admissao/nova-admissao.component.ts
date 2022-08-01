@@ -1,46 +1,44 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { mask } from '../../../utils/cpfMask';
-import {cpfInputValidator} from '../../../utils/cpfInputValidator';
-import {cpfFind} from '../../../utils/cpfFind';
-import {cpfValidate,  responseData} from './models'
-import data from "../../../data/pessoas.json"
+import { CooperadorControllerService } from 'src/controllers/cooperadores.service';
+import { ICooperadorApiData } from 'src/models/interface/CooperadorInterface';
+import { IValidateCPF } from 'src/models/interface/CPFInterface';
+import { mask } from 'src/shared/constants/cpfMask';
+import { CPFService } from 'src/shared/service/cpf.service';
 
 @Component({
   selector: 'app-nova-admissao',
   templateUrl: './nova-admissao.component.html',
   styleUrls: ['./nova-admissao.component.css']
 })
-export class NovaAdmissaoComponent implements OnInit {
+export class NovaAdmissaoComponent {
   erroMsg: string = ''
-  cooperador?: responseData
+  cooperador?: ICooperadorApiData
   cooperadorValid?: boolean
-  cpfValidate!: cpfValidate;
+  cpfValidate!: IValidateCPF;
   @Input() cpfInputValue: string = '';
-  constructor() { }
+  
+  constructor(private cpfService: CPFService, private cooperadorService: CooperadorControllerService) { }
 
-  ngOnInit(): void {
-  }
-
-  cpfMasked(){    
+  cpfMasked():string {    
     return mask['cpf'](this.cpfInputValue)
   }
 
-  validateCpf(){
-    this.cpfValidate = cpfInputValidator(this.cpfInputValue)
+  validateCpf():void {
+    this.cpfValidate = this.cpfService.cpfInputValidator(this.cpfInputValue)
     this.erroMsg = this.cpfValidate.errorMsg
   }
 
-  cooperadorValidator(){
+  cooperadorValidator():void{
     if (this.cpfValidate.isValid) {
-      this.cooperador = cpfFind( data ,this.cpfMasked())
+      this.cooperador = this.cpfService.findCooperador( this.cooperadorService.getCooperador() ,this.cpfMasked())
       this.cooperadorValid = this.cooperador.exist
       this.erroMsg = this.cooperador.errorMsg
-    } else {
+      return;
+    } 
       this.cooperadorValid = false
-    }
   }
 
-  inputHandler(){
+  inputHandler():void {
     this.validateCpf()
     this.cooperadorValidator()
   }

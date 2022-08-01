@@ -1,6 +1,6 @@
 import { Component, OnChanges, Input } from '@angular/core';
-import { cooperador } from 'src/app/pages/nova-admissao/models';
-import { situacaoCpf } from "./models";
+import { ICooperador } from 'src/models/interface/CooperadorInterface';
+import { ISituacaoCPF } from 'src/models/interface/CPFInterface';
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -8,8 +8,8 @@ import { situacaoCpf } from "./models";
 })
 export class CardsComponent implements OnChanges {
 
-  @Input() info?: cooperador
-  situacaoCpf: situacaoCpf | undefined
+  @Input() info?: ICooperador
+  situacaoCpf: ISituacaoCPF | undefined
 
   constructor() { }
 
