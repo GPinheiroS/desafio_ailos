@@ -6,6 +6,7 @@
     background: var(--alios-primary);
   
     transition: 0.5s;
+    z-index: 99;
 }
 .logo{
     display: flex;
@@ -40,4 +41,31 @@
 }
 .active{
     color: var(--alios-white);
+}
+
+@media (width < 648px) {
+    .sideBar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 5em;
+        width: 100%;
+        
+    }
+    .sideBarContent{
+        flex-direction: row;
+        height: 100%;
+    }
+    .sideBarContent li{
+        height: 100%;
+    }
+    .sideBarContent li:first-child{
+        display: none;
+    }
+    .sideBar img{
+        margin: 0em;
+    }
+    .logo{
+        width: auto;
+    }
 }

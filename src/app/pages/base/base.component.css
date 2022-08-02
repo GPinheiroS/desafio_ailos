@@ -11,3 +11,10 @@
     height: 100%;
     margin-left: 5em;
 }
+
+@media (width < 648px) {
+    .contentWrapper{
+    margin-left: 0em;
+    margin-top: 5em;
+    }
+}

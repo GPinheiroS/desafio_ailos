@@ -68,6 +68,11 @@
 }
 @media (width < 648px) {
     .header{
+    flex-direction: column-reverse ;
     flex-wrap: wrap;
+    }
+    .userMenu{
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     }
 }
