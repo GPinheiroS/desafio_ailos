@@ -10,10 +10,6 @@ export class CPFService {
         
         const filterData = data.find((pessoa: ICooperadorFullData) => pessoa.cpf === cpf);
         
-        if(!filterData){
-          return undefined;
-        }
-
         return filterData;      
       };
 
