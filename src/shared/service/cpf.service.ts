@@ -6,27 +6,15 @@ import { CooperadorApiData } from '../constants/cooperadorInitialState';
 export class CPFService {
     constructor() {}    
     
-    findCooperador(data: ICooperadorFullData[], cpf: string) {
-        let response: ICooperadorApiData = CooperadorApiData;
-      
-        data.map((pessoa: ICooperadorFullData) => {
-          if (pessoa.cpf === cpf) {
-            response.data = {
-                  nome: pessoa.nome,
-                  cpf: pessoa.cpf,
-                  conta_corrente: pessoa.conta_corrente,
-                  conta_aplicacao: pessoa.conta_aplicacao,
-                  situacao: pessoa.situacao
-                }
-            response.exist = true
-            };
-      });
-      if (!response.data.cpf) {
-          response.errorMsg = 'CPF não foi encontrado'
-      }
-      
-      return response;
-      
+    findCooperador(data: ICooperadorFullData[], cpf: string):ICooperadorFullData | undefined {
+        
+        const filterData = data.find((pessoa: ICooperadorFullData) => pessoa.cpf === cpf);
+        
+        if(!filterData){
+          return undefined;
+        }
+
+        return filterData;      
       };
 
       cpfInputValidator(cpf:string){

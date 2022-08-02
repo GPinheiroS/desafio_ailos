@@ -1,5 +1,5 @@
 import { Component, OnChanges, Input } from '@angular/core';
-import { ICooperador } from 'src/models/interface/CooperadorInterface';
+import { ICooperador, ICooperadorFullData } from 'src/models/interface/CooperadorInterface';
 import { ISituacaoCPF } from 'src/models/interface/CPFInterface';
 @Component({
   selector: 'app-cards',
@@ -8,17 +8,28 @@ import { ISituacaoCPF } from 'src/models/interface/CPFInterface';
 })
 export class CardsComponent implements OnChanges {
 
-  @Input() info?: ICooperador
-  situacaoCpf: ISituacaoCPF | undefined
+  @Input() info?: ICooperadorFullData
+  situacaoCpf?: ISituacaoCPF
 
   constructor() { }
 
-  ngOnChanges(): void {
+  ngOnInit():void {
+  }
+
+  ngOnChanges(): void {  
+    this.handleData();
+  }
+
+  handleData():void{
+    if (!this.info) {
+      return;      
+    }
+     
     this.situacaoCpf = {class: 'positive', icon: 'check_circle_outline'}
-    if (this.info?.situacao == 'Suspenso') {
+    
+    if (this.info.situacao == 'Suspenso') {
       this.situacaoCpf = {class: 'negative', icon: 'highlight_off'}
     }
-
   }
 
 }

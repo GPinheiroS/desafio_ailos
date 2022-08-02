@@ -1,44 +1,49 @@
 <div class="content">
-    <app-progress-stepper style="width:100%;"></app-progress-stepper>
-    <div class="pageInfo">
-        <h2>Informe o CPF do futuro cooperado (a)</h2>
-        <div>
-            <p>
-            Se necessário, você poderá duplicar uma conta existente ou pausar e
-            retornar este cadastro futuramente.
-            </p>
-            <p>Digite apenas os números (sem pontos ou traços).</p>
-        </div>
-        <form class="cpfForm">
-            <div class="formWrapper">
-              <label>
-                <h3>CPF</h3>
-                <input
-                [(ngModel)]="cpfInputValue"
-                  class="formInput"
-                  required
-                  name="inputCpf"
-                  type="text"
-                  placeholder="000.000.000-00"
-                  mask="000.000.000-00"
-                  (keydown.enter)="inputHandler()"
-                />
-              </label>
-              <button
-              type="button"
-              class="btn btnInverted formBtn"
-              (click)="inputHandler()"
-              >
-                Consultar por CPF
-              </button>
-            </div>
-            <p class="error">{{erroMsg}}</p>
-          </form>
-          <app-cards *ngIf="cooperadorValid" [info]="cooperador?.data" ></app-cards>
+  <app-progress-stepper style="width: 100%"></app-progress-stepper>
+  <div class="pageInfo">
+    <h2>Informe o CPF do futuro cooperado (a)</h2>
+    <div>
+      <p>
+        Se necessário, você poderá duplicar uma conta existente ou pausar e
+        retornar este cadastro futuramente.
+      </p>
+      <p>Digite apenas os números (sem pontos ou traços).</p>
     </div>
+    <form class="cpfForm">
+      <div class="formWrapper">
+        <label>
+          <h3>CPF</h3>
+          <input
+            [(ngModel)]="cpfInputValue"
+            class="formInput"
+            required
+            name="inputCpf"
+            type="text"
+            placeholder="000.000.000-00"
+            mask="000.000.000-00"
+            (keydown.enter)="inputHandler()"
+          />
+        </label>
+        <button
+          type="button"
+          class="btn btnInverted formBtn"
+          (click)="inputHandler()"
+        >
+          Consultar por CPF
+        </button>
+      </div>
+      <p class="error">{{ erroMsg }}</p>
+    </form>
+    <app-cards *ngIf="cooperadorValid" [info]="cooperador"></app-cards>
+  </div>
 </div>
 <app-footer>
-  <button *ngIf="cooperadorValid" type="button" class="btn btnInverted animated" primary>
+  <button
+    *ngIf="cooperadorValid"
+    type="button"
+    class="btn btnInverted animated"
+    primary
+  >
     Iniciar nova admissão
   </button>
   <button type="button" class="btn" secondary>

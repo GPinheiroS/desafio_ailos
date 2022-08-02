@@ -1,48 +1,50 @@
 <div class="cardRow">
-    <div class="card">
-        <h3>Situação cadastral do CPF</h3>
-        <p>Consulta na receita Federal</p>
-        <div class="cardInfo">
-            <mat-icon>person</mat-icon>
-            <div class="cardInfoRow">
-                <p>Nome</p>
-                <h3>{{info?.nome}}</h3>
-            </div>
-        </div>
-        <div class="cardInfo">
-            <mat-icon class={{situacaoCpf?.class}}>{{situacaoCpf?.icon}}</mat-icon>
-            <div class="cardInfoRow">
-                <p>Situação</p>
-                <h3>{{info?.situacao}}</h3>
-            </div>
-        </div>
+  <div class="card">
+    <h3>Situação cadastral do CPF</h3>
+    <p>Consulta na receita Federal</p>
+    <div class="cardInfo">
+      <mat-icon>person</mat-icon>
+      <div class="cardInfoRow">
+        <p>Nome</p>
+        <h3>{{ info?.nome }}</h3>
+      </div>
     </div>
-    <div class="card">
-        <h3>Conta aplicação</h3>
-        <p>Cooperativa viacredi</p>
-        <div class="cardInfo">
-            <mat-icon>credit_card</mat-icon>
-            <div class="cardInfoRow">
-                <p>Número da conta</p>
-                <h3>{{info?.conta_aplicacao}}</h3>
-            </div>
-        </div>
-        <div class="cardInfo">
-            <a href="#">Duplicar conta</a>
-        </div>
+    <div class="cardInfo">
+      <mat-icon [ngClass]="situacaoCpf?.class || ''">
+        {{ situacaoCpf?.icon }}
+      </mat-icon>
+      <div class="cardInfoRow">
+        <p>Situação</p>
+        <h3>{{ info?.situacao }}</h3>
+      </div>
     </div>
-    <div class="card">
-        <h3>Conta corrente</h3>
-        <p>Cooperativa viacredi</p>
-        <div class="cardInfo">
-            <mat-icon>credit_card</mat-icon>
-            <div class="cardInfoRow">
-                <p>Número da conta</p>
-                <h3>{{info?.conta_corrente}}</h3>
-            </div>
-        </div>
-        <div class="cardInfo">
-            <a href="#">Duplicar conta</a>
-        </div>
+  </div>
+  <div class="card">
+    <h3>Conta aplicação</h3>
+    <p>Cooperativa viacredi</p>
+    <div class="cardInfo">
+      <mat-icon>credit_card</mat-icon>
+      <div class="cardInfoRow">
+        <p>Número da conta</p>
+        <h3>{{ info?.conta_aplicacao }}</h3>
+      </div>
     </div>
+    <div class="cardInfo">
+      <a href="#">Duplicar conta</a>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Conta corrente</h3>
+    <p>Cooperativa viacredi</p>
+    <div class="cardInfo">
+      <mat-icon>credit_card</mat-icon>
+      <div class="cardInfoRow">
+        <p>Número da conta</p>
+        <h3>{{ info?.conta_corrente }}</h3>
+      </div>
+    </div>
+    <div class="cardInfo">
+      <a href="#">Duplicar conta</a>
+    </div>
+  </div>
 </div>

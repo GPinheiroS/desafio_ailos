@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CooperadorControllerService } from 'src/controllers/cooperadores.service';
-import { ICooperadorApiData } from 'src/models/interface/CooperadorInterface';
+import { ICooperadorApiData, ICooperadorFullData } from 'src/models/interface/CooperadorInterface';
 import { IValidateCPF } from 'src/models/interface/CPFInterface';
 import { mask } from 'src/shared/constants/cpfMask';
 import { CPFService } from 'src/shared/service/cpf.service';
@@ -12,7 +12,7 @@ import { CPFService } from 'src/shared/service/cpf.service';
 })
 export class NovaAdmissaoComponent {
   erroMsg: string = ''
-  cooperador?: ICooperadorApiData
+  cooperador?: ICooperadorFullData
   cooperadorValid?: boolean
   cpfValidate!: IValidateCPF;
   @Input() cpfInputValue: string = '';
@@ -31,11 +31,16 @@ export class NovaAdmissaoComponent {
   cooperadorValidator():void{
     if (this.cpfValidate.isValid) {
       this.cooperador = this.cpfService.findCooperador( this.cooperadorService.getCooperador() ,this.cpfMasked())
-      this.cooperadorValid = this.cooperador.exist
-      this.erroMsg = this.cooperador.errorMsg
-      return;
-    } 
-      this.cooperadorValid = false
+
+      if(!this.cooperador){
+        this.cooperadorValid = false
+        this.erroMsg = 'CPF não encontrado'
+        return
+      }
+      this.cooperadorValid = true
+      this.erroMsg = ''
+   } 
+      
   }
 
   inputHandler():void {
