@@ -1,0 +1,36 @@
+.notFoundWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: var(--alios-primary-brighter);
+}
+.notFound{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+}
+.notFound .mat-icon{
+    transform: scale(4);
+    margin-right: 2em;
+}
+.notFoundInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.notFound h2{
+    font-size: 1.6rem;
+}
+.notFound p{
+    font-size: 1.2rem;
+}
+
+.notFoundWrapper .btn{
+    width: 8em;
+    padding: .6em;
+}

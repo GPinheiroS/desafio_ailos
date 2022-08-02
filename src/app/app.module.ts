@@ -9,11 +9,16 @@ import { NovaAdmissaoComponent } from './pages/nova-admissao/nova-admissao.compo
 import {NgxMaskModule} from "ngx-mask";
 import { SharedLayoutModule } from 'src/shared/layout/layout.module';
 import { SharedComponentsModule } from 'src/shared/components/components.module';
+import { AppRoutingModule } from './app-routing.module';
+import { BaseComponent } from './pages/base/base.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NovaAdmissaoComponent,
+    BaseComponent,
+    NotfoundComponent
   ],
   imports: [
     SharedComponentsModule,
@@ -23,7 +28,8 @@ import { SharedComponentsModule } from 'src/shared/components/components.module'
     FormsModule,
     MatIconModule,
     MatBadgeModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
