@@ -16,9 +16,9 @@
           <input
             [(ngModel)]="cpfInputValue"
             class="formInput"
-            required
-            name="inputCpf"
             type="text"
+            pattern="\d*"
+            name="inputCpf"
             placeholder="000.000.000-00"
             mask="000.000.000-00"
             (keydown.enter)="inputHandler()"

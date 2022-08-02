@@ -26,6 +26,9 @@ export class NovaAdmissaoComponent {
   validateCpf():void {
     this.cpfValidate = this.cpfService.cpfInputValidator(this.cpfInputValue)
     this.erroMsg = this.cpfValidate.errorMsg
+    if (!this.cpfValidate.isValid) {
+      this.cooperadorValid = false
+    }
   }
 
   cooperadorValidator():void{

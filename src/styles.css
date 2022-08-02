@@ -49,3 +49,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .btnInverted:hover{
   background-color: var(--alios-primary-darker);
 }
+
+.footer .btn {
+  padding: .6em;
+}
+@media (width < 648px) {
+  .footer .btn {
+    width: 100%;
+  }
+}

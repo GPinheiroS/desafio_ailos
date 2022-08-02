@@ -75,3 +75,12 @@
       margin-left: 0;
     }
   }
+
+  @media (width < 648px) {
+    .card {
+        width: 100%;
+    }
+
+
+
+}
