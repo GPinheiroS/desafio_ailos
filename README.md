@@ -15,6 +15,8 @@ Clone o repositorio do projeto executando `git clone https://github.com/GPinheir
 
 Ápos terminar as preparações, execute o comando `npm start` ou  `ng serve` para inicializar o servidor de desenvolvimento. Navegue até a rota `http://localhost:4200/` para acessar a aplicação
 
+O Projeto também pode ser acessado via vercel [aqui](https://desafio-ailos.vercel.app/nova-admissao)
+
 ## Lista de Cooperadores Válidos 
 
 1. Arthur Thiago Aparício | CPF:249.670.266-30
